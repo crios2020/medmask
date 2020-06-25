@@ -115,13 +115,14 @@ alter table solicitudesDeMascaras
     references armadores(id);
 
 create table solicitudesDeMateriales(
-	id 					int 							auto_increment primary key,
-	idSolicitante 		int 							not null,
-	estado 				enum('Pendiente','Resuelto') 	not null,
-	fechaPublicacion 	date 							not null,
-	fechaRecepcion 		date,
-    idMaterial			int 							not null,
-    cantidad 			int								not null,
+	id 					int 										auto_increment primary key,
+	idSolicitante 		int 										not null,
+	estado 				enum('Pendiente','Resuelto','Ejecucion') 	not null,
+	fechaPublicacion 	date 										not null,
+	fechaInicioArmado	date,							-- Fecha en que se inicio el armado de la máscara.
+    fechaRecepcion 		date,							-- Fecha en que se entregan las máscaras.
+    idMaterial			int 										not null,
+    cantidad 			int											not null,
     cantidadRecibida	int,							-- Este campo indica la cantidad de unidades recibidas
 	mensaje 			varchar(255)
 );
