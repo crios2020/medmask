@@ -99,6 +99,8 @@ create table solicitudesDeMascaras(
 	fechaPublicacion 	date 							not null,
 	fechaRecepcion 		date,
     cantidadMascaras	int								not null,
+    idArmador			int,
+    cantidadRecibida	int,							-- Este campo indica la cantidad de mascaras recibidas
 	mensaje 			varchar(255)
 );
 
@@ -106,6 +108,11 @@ alter table solicitudesDeMascaras
 	add constraint fk_solicitudes_idSolicitanteMascara
     foreign key (idSolicitante)
     references solicitantes(id);
+
+alter table solicitudesDeMascaras
+	add constraint fk_solicitudes_idArmador
+    foreign key (idArmador)
+    references armadores(id);
 
 create table solicitudesDeMateriales(
 	id 					int 							auto_increment primary key,
@@ -115,6 +122,7 @@ create table solicitudesDeMateriales(
 	fechaRecepcion 		date,
     idMaterial			int 							not null,
     cantidad 			int								not null,
+    cantidadRecibida	int,							-- Este campo indica la cantidad de unidades recibidas
 	mensaje 			varchar(255)
 );
 

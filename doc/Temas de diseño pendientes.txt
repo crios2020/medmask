@@ -1,0 +1,3 @@
+- La base de datos no resuelve medios de contactos ni entregas. (solo le pide al usurario el mail)
+- La base de datos no registra cuantas máscaras armo un armador.
+- Solo trabajamos con la mascara V1 la V0 no esta incluida en esta APP
