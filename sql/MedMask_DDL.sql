@@ -93,12 +93,13 @@ alter table materialesParaDonar
     references materiales(id);
 
 create table solicitudesDeMascaras(
-	id 					int 							auto_increment primary key,
-	idSolicitante 		int 							not null,
-	estado 				enum('Pendiente','Resuelto') 	not null,
-	fechaPublicacion 	date 							not null,
-	fechaRecepcion 		date,
-    cantidadMascaras	int								not null,
+	id 					int 										auto_increment primary key,
+	idSolicitante 		int 										not null,
+	estado 				enum('Pendiente','Resuelto','Ejecucion') 	not null,
+	fechaPublicacion 	date 										not null,
+    fechaInicioArmado	date,							-- Fecha en que se inicio el armado de la máscara.
+	fechaRecepcion 		date,							-- Fecha en que se entregan las máscaras
+    cantidadMascaras	int											not null,
     idArmador			int,
     cantidadRecibida	int,							-- Este campo indica la cantidad de mascaras recibidas
 	mensaje 			varchar(255)
@@ -117,10 +118,9 @@ alter table solicitudesDeMascaras
 create table solicitudesDeMateriales(
 	id 					int 										auto_increment primary key,
 	idSolicitante 		int 										not null,
-	estado 				enum('Pendiente','Resuelto','Ejecucion') 	not null,
+	estado 				enum('Pendiente','Resuelto') 	not null,
 	fechaPublicacion 	date 										not null,
-	fechaInicioArmado	date,							-- Fecha en que se inicio el armado de la máscara.
-    fechaRecepcion 		date,							-- Fecha en que se entregan las máscaras.
+    fechaRecepcion 		date,
     idMaterial			int 										not null,
     cantidad 			int											not null,
     cantidadRecibida	int,							-- Este campo indica la cantidad de unidades recibidas
