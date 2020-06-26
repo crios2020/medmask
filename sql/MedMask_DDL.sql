@@ -24,6 +24,10 @@ create table usuarios(
     pass 		varchar(25) 	not null
 );
 
+alter table usuarios
+	add constraint u_usuarios_email
+    unique(email);
+
 create table solicitantes(
 	id 			int 			auto_increment primary key,
     idUsuario 	int 			not null,
