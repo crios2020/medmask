@@ -17,7 +17,6 @@ select ma.id,ma.nombre,md.cantidad, concat(u.nombre,' ',u.apellido) donante, u.e
 -- Aporte de consultas de la compañera Waleska
 
 -- 1- Qué solicitudes de máscaras hay pendientes en Belgrano.
-use medmask;
 
 select s.idUsuario, s.institucion, concat(u.nombre,' ',u.apellido) solicitante, u.localidad, smc.fechaPublicacion, smc.cantidadMascaras, smc.mensaje
         from usuarios u join solicitantes s on u.id=s.idUsuario
