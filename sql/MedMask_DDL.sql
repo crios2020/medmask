@@ -1,9 +1,9 @@
 -- Este archivo arma la estructura de la base
 -- Ejecutar este archivo implica borrar toda la base existente
 
-drop database if exists medmask;
-create database medmask;
-use medmask;
+-- drop database if exists medmask;
+-- create database medmask;
+-- use medmask;
 
 drop table if exists solicitudesDeMascaras;
 drop table if exists solicitantes;
@@ -20,6 +20,8 @@ create table usuarios(
     nombre 		varchar(25) 	not null,
     apellido 	varchar(25) 	not null,
     localidad 	varchar(25) 	not null,
+    provincia	varchar(25) 	default 'CABA',
+    pais		varchar(25)		default 'Argentina',
     email 		varchar(60) 	not null,
     pass 		varchar(25) 	not null
 );
@@ -27,7 +29,7 @@ create table usuarios(
 alter table usuarios
 	add constraint u_usuarios_email
     unique(email);
-
+    
 create table solicitantes(
 	id 			int 			auto_increment primary key,
     idUsuario 	int 			not null,
@@ -39,6 +41,15 @@ alter table solicitantes
     foreign key (idUsuario)
     references usuarios(id);
 
+alter table solicitantes
+	add constraint u_solicitantes_institucion
+	unique(institucion);
+
+-- No se usa esta restricción por que se considera que un solicitante puede pedir para varias instituciones.
+-- alter table solicitantes
+-- 	add constraint u_solicitantes_idUsuario
+--  unique(idUsuario);
+
 create table donantes(
 	id 			int 			auto_increment primary key,
     idUsuario 	int 			not null
@@ -49,6 +60,10 @@ alter table donantes
     foreign key (idUsuario)
     references usuarios(id);
 
+alter table donantes
+	add constraint u_donantes_idUsuario
+    unique(idUsuario);
+
 create table armadores(
 	id 			int 			auto_increment primary key,
     idUsuario 	int 			not null
@@ -58,7 +73,11 @@ alter table armadores
 	add constraint fk_armadores_idUsuario
     foreign key (idUsuario)
     references usuarios(id);
- 
+    
+alter table armadores
+	add constraint u_armadores_idUsuario
+    unique(idUsuario);
+
 create table materiales(
 	id 			int 			auto_increment primary key,
     nombre 		varchar(25) 	not null,
