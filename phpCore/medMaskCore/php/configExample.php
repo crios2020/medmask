@@ -5,5 +5,5 @@ $db = [
     'username' => 'root',
     'password' => '',
     'db' => 'exrest'
-];
+	];
 ?>

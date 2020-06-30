@@ -3,12 +3,52 @@ Path Servicio: localhost/medMaskCore
 
 
 
-
 -- Usuarios
 Path: /usuarios/v1
 
--- Armadores
+Path: /all
+Descripción: no recibe parametros y entrega un Json con los usuarios (sin campo pass).
+
+Path: /byId
+Descripción: recibe como parametro un Id por GET y devuelve un usuario en formato Json (sin campo pass).
+
+Path: /byEmail
+Descripción: recibe como parametro un email por GET y devuelve un usuario en formato Json (sin campo pass)
+
+Path: /byLocalidad
+Descripción: recibe como paremetro un pais una provincia y una localidad por GET y devuelve un Json con los usuarios coincidentes.
+	Si pais es vacio por defecto Argentina, si provincia es vacio por defecto es CABA, y las localidades para CABA representan barrios
+
+Path: /alta
+Descripción: recibe parametros por post 
+	String nombre
+	String apellido
+	String localidad
+	String provincia default CABA
+	String pais	default Argentina
+	String email (Es un campo que tiene restricción Unique - Por ahora no vamos a trabajar en validad formato)
+	String pass (Entra por post - Más adelante trabajamos en la encriptación)
+
+Path: /Baja no lo resolvemos en esta primer etapa
+
+Path: /Update no lo resolvemos en esta primer etapa
+
+-- Armadores - Tener en cuenta que un armador incluye un usuario es una relación de composición
 Path: /armadores/v1
+
+Path: /all
+Descripción: no recibe parametros y entrega un Json con los armadores y campos de usuarios (sin campo pass).
+
+Path: /byId
+Descripción: recibe como parametro un Id por GET y devuelve un armador y campos de usuarios en formato Json (sin campo pass).
+
+Path: /byEmail
+Descripción: recibe como parametro un email por GET y devuelve un armador y campos de usuarios en formato Json (sin campo pass)
+
+Path: /byLocalidad
+Descripción: recibe como paremetro un pais una provincia y una localidad por GET y devuelve un Json con los armadores y usuarios coincidentes.
+	Si pais es vacio por defecto Argentina, si provincia es vacio por defecto es CABA, y las localidades para CABA representan barrios
+
 
 -- Donantes
 Path: /donantes/v1
@@ -23,7 +63,7 @@ Path: /all
 Descripción: no recibe parametros y entrega un Json con los materiales.
 
 Path: /byId
-Descripción: recibe como parametro un Id y devuelve un material en formato Json
+Descripción: recibe como parametro un Id por GET y devuelve un material en formato Json
 
 
 -- SolicituDeMaterliales
@@ -39,7 +79,7 @@ Path: /donaciones/v1
 Path: /solicitudesDeMascaras/v1
 
 
--- Servicios Externos
+-- Servicios Externos - Falta resolver estos listados provistos por entidades externas
 -- paises
 -- provincias
 -- localidades
