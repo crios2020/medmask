@@ -1,0 +1,46 @@
+Documento De Servicio REST, Servicio MedMask Versión V1
+Path Servicio: localhost/medMaskCore
+
+
+
+
+-- Usuarios
+Path: /usuarios/v1
+
+-- Armadores
+Path: /armadores/v1
+
+-- Donantes
+Path: /donantes/v1
+
+-- Solicitantes
+Path: /solicitantes/v1
+
+-- Materiales (Este servicio inicialmente es readOnly)
+Path: /materiales/v1
+
+Path: /all
+Descripción: no recibe parametros y entrega un Json con los materiales.
+
+Path: /byId
+Descripción: recibe como parametro un Id y devuelve un material en formato Json
+
+
+-- SolicituDeMaterliales
+Path: /solicitudDeMateriales/v1
+
+-- MaterialesParaDonar
+Path: /materialesParaDonar/v1
+
+--Donaciones
+Path: /donaciones/v1
+
+--SolicitudesDeMascaras
+Path: /solicitudesDeMascaras/v1
+
+
+-- Servicios Externos
+-- paises
+-- provincias
+-- localidades
+-- barrios
