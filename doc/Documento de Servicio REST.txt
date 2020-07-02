@@ -41,7 +41,7 @@ Path: /Baja no lo resolvemos en esta primer etapa
 Path: /Update no lo resolvemos en esta primer etapa
 
 ========================================================================
--- Armadores - Tener en cuenta que un armador incluye un usuario es una relación de composición
+-- Armadores - Tener en cuenta que un armador incluye un usuario es una relación de composición    Jose
 ========================================================================
 Path: /entidades/armadores/v1
 
@@ -66,7 +66,7 @@ Path: /Baja no lo resolvemos en esta primer etapa
 Path: /Update no lo resolvemos en esta primer etapa
 
 ========================================================================
--- Donantes - Tener en cuenta que un armador incluye un usuario es una relación de composición
+-- Donantes - Tener en cuenta que un armador incluye un usuario es una relación de composición		Donante
 ========================================================================
 Path: /entidades/donantes/v1
 
@@ -91,7 +91,7 @@ Path: /Baja no lo resolvemos en esta primer etapa
 Path: /Update no lo resolvemos en esta primer etapa
 
 ========================================================================
--- Solicitantes - Tener en cuenta que un armador incluye un usuario es una relación de composición
+-- Solicitantes - Tener en cuenta que un solicitante incluye un usuario es una relación de composición			Belen
 ========================================================================
 Path: /entidades/solicitantes/v1
 
@@ -131,7 +131,7 @@ Descripción: recibe como parametro un Id por GET y devuelve un material en form
 
 
 ========================================================================
--- SolicituDeMateriales Incluye el armador y los materiales
+-- SolicituDeMateriales Incluye el armador y los materiales						Pablo
 ========================================================================
 Path: /entidades/solicitudDeMateriales/v1
 
@@ -151,13 +151,13 @@ Descripción: recibe parametros por post
 
 Nota: 	fechaPublicacion no entra como parametro, es la fecha actual.
 		estado no entra por parametro es 'Pendiente'
-		fechaRecepcion vacio
-		cantidad recibida vacia
+		fechaRecepcion null
+		cantidad recibida null
 
 Path: /Recibido
 Descripción: recibe parametros por post 
 	int		id
-	int 	cantidad
+	int 	cantidad '>0'
 
 Nota: Completa los datos y agrega fechaRecepción con fecha actual 
 y cambia el estado a Resuelto, en caso de ser un pedido incompleto, el front gestiona un nuevo pedido
@@ -167,7 +167,7 @@ Path: /Baja no lo resolvemos en esta primer etapa
 Path: /Update no lo resolvemos en esta primer etapa
 
 ========================================================================
--- MaterialesParaDonar Incluye Materiales y Donaciones
+-- MaterialesParaDonar Incluye Materiales y Donaciones    CArlos
 ========================================================================
 Path: /entidades/materialesParaDonar/v1
 
@@ -185,7 +185,7 @@ Path: /Baja no lo resolvemos en esta primer etapa
 Path: /Update no lo resolvemos en esta primer etapa
 
 ========================================================================
---Donaciones Incluye el donante
+--Donaciones Incluye el donante					Gaston
 ========================================================================
 Path: /entidades/donaciones/v1
 
@@ -217,7 +217,7 @@ Path: /Baja no lo resolvemos en esta primer etapa
 Path: /Update no lo resolvemos en esta primer etapa
 
 ========================================================================
---SolicitudesDeMascaras incluye un solicitante y un armador
+--SolicitudesDeMascaras incluye un solicitante y un armador				Saku
 ========================================================================
 Path: /entidades/solicitudesDeMascaras/v1
 
@@ -262,7 +262,7 @@ Path: /Update no lo resolvemos en esta primer etapa.
 -- paises
 no lo resolvemos en esta primer etapa.
 
--- provinciasArgetninas
+-- provinciasArgentinas
 TERMINADO
 Path: geografia/provinciasArgentinas/v1
 Descripción: Lista las provincias de Argentina
