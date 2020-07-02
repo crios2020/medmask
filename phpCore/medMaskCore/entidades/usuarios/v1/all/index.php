@@ -2,7 +2,7 @@
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/config.php";
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/connector.php";
 	$dbConn =  connect($db);
-	$sql = $dbConn->prepare("SELECT * FROM usuarios");
+	$sql = $dbConn->prepare("SELECT id,nombre,apellido,pais,provincia,localidad,email FROM usuarios");
 	$sql->execute();
 	$sql->setFetchMode(PDO::FETCH_ASSOC);
 	header("HTTP/1.1 200 OK");

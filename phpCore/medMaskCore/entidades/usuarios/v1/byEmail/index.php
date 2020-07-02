@@ -4,7 +4,7 @@
 	if (isset($_GET['email']))
     {
 		$dbConn =  connect($db);
-		$sql = $dbConn->prepare("SELECT * FROM usuarios where email=:email");
+		$sql = $dbConn->prepare("SELECT id,nombre,apellido,pais,provincia,localidad,email FROM usuarios where email=:email");
 		$sql->bindValue(':email', $_GET['email']);
 		$sql->execute();
 		header("HTTP/1.1 200 OK");

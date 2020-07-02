@@ -4,7 +4,7 @@
 	if (isset($_GET['localidad']))
     {
 		$dbConn =  connect($db);
-		$sql = $dbConn->prepare("SELECT * FROM usuarios where localidad=:localidad");
+		$sql = $dbConn->prepare("SELECT id,nombre,apellido,pais,provincia,localidad,email FROM usuarios where localidad=:localidad");
 		$sql->bindValue(':localidad', $_GET['localidad']);
 		$sql->execute();
 		$sql->setFetchMode(PDO::FETCH_ASSOC);
