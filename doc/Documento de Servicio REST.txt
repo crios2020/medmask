@@ -66,7 +66,7 @@ Path: /Baja no lo resolvemos en esta primer etapa
 Path: /Update no lo resolvemos en esta primer etapa
 
 ========================================================================
--- Donantes - Tener en cuenta que un armador incluye un usuario es una relación de composición		Donante
+-- Donantes - Tener en cuenta que un armador incluye un usuario es una relación de composición		Waleska
 ========================================================================
 Path: /entidades/donantes/v1
 
@@ -167,7 +167,7 @@ Path: /Baja no lo resolvemos en esta primer etapa
 Path: /Update no lo resolvemos en esta primer etapa
 
 ========================================================================
--- MaterialesParaDonar Incluye Materiales y Donaciones    CArlos
+-- MaterialesParaDonar Incluye Materiales y Donaciones    Carlos y Francisco
 ========================================================================
 Path: /entidades/materialesParaDonar/v1
 
