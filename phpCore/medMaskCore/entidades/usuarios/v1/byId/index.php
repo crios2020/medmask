@@ -4,7 +4,7 @@
 	if (isset($_GET['id']))
     {
 		$dbConn =  connect($db);
-		$sql = $dbConn->prepare("SELECT * FROM materiales where id=:id");
+		$sql = $dbConn->prepare("SELECT * FROM usuarios where id=:id");
 		$sql->bindValue(':id', $_GET['id']);
 		$sql->execute();
 		header("HTTP/1.1 200 OK");
