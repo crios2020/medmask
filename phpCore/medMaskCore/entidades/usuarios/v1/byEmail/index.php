@@ -1,6 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/config.php";
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/connector.php";
+	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/utils.php";
 	if (isset($_GET['email']))
     {
 		$dbConn =  connect($db);

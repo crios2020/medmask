@@ -4,6 +4,6 @@ $db = [
     'host' => 'localhost',
     'username' => 'root',
     'password' => '',
-    'db' => 'exrest'
+    'db' => 'medmask'
 	];
 ?>

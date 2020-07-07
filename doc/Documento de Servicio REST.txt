@@ -5,7 +5,7 @@ Path Servicio: localhost/medMaskCore
 ========================================================================
 -- Usuarios
 ========================================================================
-
+TERMINADO testeado
 Path: /entidades/usuarios/v1
 
 Path: /all
@@ -120,7 +120,7 @@ Path: /Update no lo resolvemos en esta primer etapa
 ========================================================================
 -- Materiales (Este servicio inicialmente es readOnly)
 ========================================================================
-TERMINADO
+TERMINADO	testeado
 Path: /entidades/materiales/v1
 
 Path: /all
@@ -263,17 +263,17 @@ Path: /Update no lo resolvemos en esta primer etapa.
 no lo resolvemos en esta primer etapa.
 
 -- provinciasArgentinas
-TERMINADO
+TERMINADO	Testeado
 Path: geografia/provinciasArgentinas/v1
 Descripción: Lista las provincias de Argentina
 
 -- partidosBuenosAires
-TERMINADO
+TERMINADO	Testeado
 Path: geografia/partidosBuenosAires/v1
 Descripción: Lista las partidos de Buenos Aires
 
 -- barriosCABA
-TERMINADO
+TERMINADO	Testeado
 Path: geografia/barriosCaba/v1
 Descripción: Lista los Barrios de CABA
 
