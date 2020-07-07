@@ -1,0 +1,15 @@
+<?php
+	//Solicitudes de materiales, con materiales y armadores
+	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/config.php";
+	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/connector.php";
+	$dbConn =  connect($db);
+	StrSql = "select * from solicitudesDeMateriales SM, armadores A, materiales M 
+			 where SM.idSolicitante = A.idUsuario and SM.idMaterial=M.id "
+	$sql = $dbConn->prepare(StrSql);
+	$sql->execute();
+	$sql->setFetchMode(PDO::FETCH_ASSOC);
+	header("HTTP/1.1 200 OK");
+	header('Content-type:application/json');
+	echo json_encode($sql->fetchAll());
+	exit();
+?>

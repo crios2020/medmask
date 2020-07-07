@@ -1,0 +1,26 @@
+<?php
+	//ALTA
+	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/config.php";
+	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/connector.php";
+	$dbConn =  connect($db);
+	$StrSql = "insert into solicitudesDeMateriales 
+			 (idMaterial, idSolicitante, cantidad, mensaje, fechaPublicacion, estado)
+			  values (:idMaterial , :idSolicitante, :cantidad , :mensaje , curdate(), 'Pendiente'" 
+
+	$sql->bindValue(':idMaterial', $_GET['idMaterial']);
+	$sql->bindValue(':cantidad', $_GET['cantidad']);
+	$sql->bindValue(':mensaje', $_GET['mensaje']);
+	$sql->bindValue(':idSolicitante', $_GET['idSolicitante']);
+	
+	$sql = $dbConn->prepare($StrSql);
+	$sql->execute();
+	$postId = $dbConn->lastInsertId();
+	if($postId)
+	{
+		$input['id'] = $postId;
+		header("HTTP/1.1 200 OK");
+		header('Content-type:application/json');
+		echo json_encode($input);
+		exit();
+	}
+?>

@@ -1,12 +1,12 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/config.php";
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/connector.php";
-	if (isset($_GET['email']) && isset($_GET['pass']))
+	if (isset($_POST['email']) && isset($_POST['pass']))
     {
 		$dbConn =  connect($db);
 		$sql = $dbConn->prepare("SELECT * FROM usuarios where email=:email and pass=:pass");
-		$sql->bindValue(':email', $_GET['email']);
-		$sql->bindValue(':pass', $_GET['pass']);
+		$sql->bindValue(':email', $_POST['email']);
+		$sql->bindValue(':pass', $_POST['pass']);
 		$sql->execute();
 		$sql->setFetchMode(PDO::FETCH_ASSOC);
 		$resultado = $sql->fetchAll();

@@ -1,18 +1,17 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/config.php";
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/connector.php";
-	$input = $_POST;
-	if(!isset($input['provincia']) || $input['provincia']=='') $input['provincia']='CABA';
-	if(!isset($input['pais']) || $input['pais']=='') $input['pais']='Argentina';
-	$sql = "INSERT INTO usuarios
-		  (nombre, apellido, localidad, provincia, pais, email, pass)
+	$input = $_GET;
+	$sql = "INSERT INTO donantes
+		  (idUsuario)
 		  VALUES
-		  (:nombre, :apellido, :localidad, :provincia, :pais, :email, :pass)";
+		  (:idUsuario)";
 	$dbConn =  connect($db);
 	$statement = $dbConn->prepare($sql);
 	bindAllValues($statement, $input);
 	$statement->execute();
 	$postId = $dbConn->lastInsertId();
+	
 	if($postId)
 	{
 		$input['id'] = $postId;
@@ -22,4 +21,3 @@
 		exit();
 	}
 ?>
-

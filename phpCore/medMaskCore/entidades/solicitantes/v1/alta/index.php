@@ -1,13 +1,13 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/config.php";
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/connector.php";
-	$input = $_POST;
-	if(!isset($input['provincia']) || $input['provincia']=='') $input['provincia']='CABA';
+	$input = $_GET;
+	if(!isset($input['provincia']) || $input['provincia']=='') $input[provincia]='CABA';
 	if(!isset($input['pais']) || $input['pais']=='') $input['pais']='Argentina';
-	$sql = "INSERT INTO usuarios
-		  (nombre, apellido, localidad, provincia, pais, email, pass)
+	$sql = "INSERT INTO solicitantes
+		  (nombre, apellido, localidad, provincia, pais, email, institucion)
 		  VALUES
-		  (:nombre, :apellido, :localidad, :provincia, :pais, :email, :pass)";
+		  (:nombre, :apellido, :localidad, :provincia, :pais, :email, :institucion)";
 	$dbConn =  connect($db);
 	$statement = $dbConn->prepare($sql);
 	bindAllValues($statement, $input);

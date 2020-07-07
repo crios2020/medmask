@@ -1,0 +1,17 @@
+<?php
+	//Actualización
+	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/config.php";
+	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/connector.php";
+	$dbConn =  connect($db);
+	$StrSql = "update solicitudesDeMateriales set cantidad = :cantidad, fechaRecepción = curdate() where id= :id"
+
+	$sql->bindValue(':id', $_GET['id']);
+	$sql->bindValue(':cantidad', $_GET['cantidad']);
+	
+	$sql = $dbConn->prepare($StrSql);
+	$sql->execute();
+	header("HTTP/1.1 200 OK");
+	header('Content-type:application/json');
+	echo json_encode($sql->rowCount() > 0);
+	exit();
+?>
