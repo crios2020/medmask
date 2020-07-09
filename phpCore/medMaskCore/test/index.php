@@ -3,7 +3,9 @@
 <head><title>test API medMask</title></head>
 <body>
 	<?php 
-		$url="http://localhost/medMaskCore/"
+		//Colocar aca la url del proyecto
+		//$url="https://diycovid19mask.com/medMaskCore/";
+		$url="http://localhost/medMaskCore/";
 	?>
 	
 	<hr>
