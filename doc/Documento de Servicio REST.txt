@@ -5,7 +5,7 @@ Path Servicio: localhost/medMaskCore
 ========================================================================
 -- Usuarios
 ========================================================================
-TERMINADO testeado
+Estado: TERMINADO testeado
 Path: /entidades/usuarios/v1
 
 Path: /all
@@ -36,13 +36,14 @@ Descripción: recibe parametros por post y devuelve true o false, segun se verif
 	String email:
 	String pass:
 
-Path: /Baja no lo resolvemos en esta primer etapa
+Path: /baja no lo resolvemos en esta primer etapa
 
-Path: /Update no lo resolvemos en esta primer etapa
+Path: /update no lo resolvemos en esta primer etapa
 
 ========================================================================
 -- Armadores - Tener en cuenta que un armador incluye un usuario es una relación de composición    Jose
 ========================================================================
+Estado: TERMINADO testeado
 Path: /entidades/armadores/v1
 
 Path: /all
@@ -58,16 +59,17 @@ Path: /byLocalidad
 Descripción: recibe como paremetro un pais una provincia y una localidad por GET y devuelve un Json con los armadores y usuarios coincidentes.
 	Si pais es vacio por defecto Argentina, si provincia es vacio por defecto es CABA, y las localidades para CABA representan barrios
 
-Path: /Alta
+Path: /alta
 Descripción: Sin parametros, devuelve true o false, si se pudo dar de alta
 
-Path: /Baja no lo resolvemos en esta primer etapa
+Path: /baja no lo resolvemos en esta primer etapa
 
-Path: /Update no lo resolvemos en esta primer etapa
+Path: /update no lo resolvemos en esta primer etapa
 
 ========================================================================
 -- Donantes - Tener en cuenta que un armador incluye un usuario es una relación de composición		Waleska
 ========================================================================
+Estado: TERMINADO testeado
 Path: /entidades/donantes/v1
 
 Path: /all
@@ -93,6 +95,7 @@ Path: /Update no lo resolvemos en esta primer etapa
 ========================================================================
 -- Solicitantes - Tener en cuenta que un solicitante incluye un usuario es una relación de composición			Belen
 ========================================================================
+Estado: TERMINADO testeado
 Path: /entidades/solicitantes/v1
 
 Path: /all
@@ -108,6 +111,12 @@ Path: /byLocalidad
 Descripción: recibe como paremetro un pais una provincia y una localidad por GET y devuelve un Json con los solicitantes y usuarios coincidentes.
 	Si pais es vacio por defecto Argentina, si provincia es vacio por defecto es CABA, y las localidades para CABA representan barrios
 
+Path: /byInstitucion
+Descripción: recibe como paremetro una institucion y devuelve un Json con los solicitantes y usuarios coincidentes.
+
+Path: /likeInstitucion
+Descripción: recibe como paremetro una institucion y devuelve un Json con los solicitantes y usuarios con expresiones coincidentes.
+
 Path: /Alta
 Descripción: Ingresa por Post
 	String institucion
@@ -120,7 +129,7 @@ Path: /Update no lo resolvemos en esta primer etapa
 ========================================================================
 -- Materiales (Este servicio inicialmente es readOnly)
 ========================================================================
-TERMINADO	testeado
+Estado: TERMINADO	testeado
 Path: /entidades/materiales/v1
 
 Path: /all
@@ -263,17 +272,17 @@ Path: /Update no lo resolvemos en esta primer etapa.
 no lo resolvemos en esta primer etapa.
 
 -- provinciasArgentinas
-TERMINADO	Testeado
+Estado: TERMINADO	Testeado
 Path: geografia/provinciasArgentinas/v1
 Descripción: Lista las provincias de Argentina
 
 -- partidosBuenosAires
-TERMINADO	Testeado
+Estado: TERMINADO	Testeado
 Path: geografia/partidosBuenosAires/v1
 Descripción: Lista las partidos de Buenos Aires
 
 -- barriosCABA
-TERMINADO	Testeado
+Estado: TERMINADO	Testeado
 Path: geografia/barriosCaba/v1
 Descripción: Lista los Barrios de CABA
 

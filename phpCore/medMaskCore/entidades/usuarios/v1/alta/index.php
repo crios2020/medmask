@@ -3,7 +3,6 @@
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/connector.php";
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/utils.php";
 	$input = $_POST;
-	//print_r($input);
 	if(!isset($input['provincia']) || $input['provincia']=='') $input['provincia']='CABA';
 	if(!isset($input['pais']) || $input['pais']=='') $input['pais']='Argentina';
 	$sql = "INSERT INTO usuarios
@@ -28,4 +27,3 @@
 	}
 	exit();
 ?>
-

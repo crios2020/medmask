@@ -3,8 +3,7 @@
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/connector.php";
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/utils.php";
 	$input = $_POST;
-	if (isset($input['email']) && isset($input['pass']))
-    {
+	if (isset($input['email']) && isset($input['pass'])){
 		$dbConn =  connect($db);
 		$sql = $dbConn->prepare("SELECT * FROM usuarios where email=:email and pass=:pass");
 		$sql->bindValue(':email', $input['email']);

@@ -1,6 +1,7 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/config.php";
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/connector.php";
+	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/utils.php";
 	$dbConn =  connect($db);
 	$sql = $dbConn->prepare("SELECT d.id, u.id idUsuario, nombre,apellido,pais,provincia,localidad,email FROM usuarios u JOIN donantes d ON u.id=d.idUsuario");
 	$sql->execute();

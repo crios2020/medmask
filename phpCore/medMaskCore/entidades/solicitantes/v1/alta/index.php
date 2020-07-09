@@ -1,25 +1,24 @@
 <?php
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/config.php";
 	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/connector.php";
-	$input = $_GET;
-	if(!isset($input['provincia']) || $input['provincia']=='') $input[provincia]='CABA';
-	if(!isset($input['pais']) || $input['pais']=='') $input['pais']='Argentina';
-	$sql = "INSERT INTO solicitantes
-		  (nombre, apellido, localidad, provincia, pais, email, institucion)
-		  VALUES
-		  (:nombre, :apellido, :localidad, :provincia, :pais, :email, :institucion)";
-	$dbConn =  connect($db);
-	$statement = $dbConn->prepare($sql);
-	bindAllValues($statement, $input);
-	$statement->execute();
-	$postId = $dbConn->lastInsertId();
-	if($postId)
-	{
-		$input['id'] = $postId;
-		header("HTTP/1.1 200 OK");
-		header('Content-type:application/json');
-		echo json_encode($input);
-		exit();
+	include $_SERVER['DOCUMENT_ROOT']."/medMaskCore/php/utils.php";
+	$input = $_POST;
+	$sql = "INSERT INTO solicitantes (idUsuario,institucion) VALUES (:idUsuario,:institucion)";
+	header("HTTP/1.1 200 OK");
+	header('Content-type:application/json');
+	try {
+		$dbConn =  connect($db);
+		$statement = $dbConn->prepare($sql);
+		bindAllValues($statement, $input);
+		$statement->execute();
+		$postId = $dbConn->lastInsertId();
+		if($postId){
+			echo json_encode('true');
+		}else{
+			echo json_encode('false');
+		}
+	} catch (Throwable $e) {
+		echo json_encode('false');
 	}
+	exit();
 ?>
-
