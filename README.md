@@ -3,10 +3,10 @@ Repositorio publico de archivos, para el proyecto colaborativo MedMask, (Creaci�
 Los siguientes Alumnos del Centro de Formación Profesional N 8 prestaron su colaboración para este proyecto: 
 - May Felice.
 - Waleska Marin.
-- Jimena Disanso
+- Jimena Di Sanzo
 - Belen Silva
 - Andres Correa Weitzel
-- Javier Weiss
+- Javier Blanco
 - Gaston Rey
 - Francisco Acuña
 - Pablo Malamud
