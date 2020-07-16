@@ -1,0 +1,52 @@
+.tablas {
+	max-height: 1vh;
+	border-radius: 450px 45 45;
+	border-collapse: collapse;
+	padding: 5px;
+	background-color: #FFF;
+	border: thin solid #056861;
+	filter: Shadow(Color=ffff, Direction=down);
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+	border-spacing: px 20px;
+	text-align: left;
+}
+body {
+	background-color: #1AC8CB;
+}
+.botonok {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #1AC8CB;
+	border: thin solid #000;
+	height: 40px;
+	padding: 3px;
+	-webkit-transition: background-color ease-in;
+	-moz-transition: background-color ease-in;
+	-ms-transition: background-color ease-in;
+	-o-transition: background-color ease-in;
+	transition: background-color ease-in;
+}
+.botonrojo {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #FF0000;
+	border: thin solid #000;
+	height: 40px;
+	padding: 3px;
+	-webkit-transition: background-color ease-in;
+	-moz-transition: background-color ease-in;
+	-ms-transition: background-color ease-in;
+	-o-transition: background-color ease-in;
+	transition: background-color ease-in;
+}
+
+.Texto_Titulo_Accion {
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
+    color: #7CCFED;
+    font-size: x-large;
+    text-align: center;
+}

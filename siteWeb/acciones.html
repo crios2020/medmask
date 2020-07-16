@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Acciones</title>
+<link href="MedMask.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+
+
+<table width="800" border="1" align="center" cellpadding="0" cellspacing="0" class="tablas">
+  <tr>
+    <th align="left" scope="col">Bienvenido Mengano - Elija que accion desea realizar</th>
+  </tr>
+  <tr>
+    <th align="center" scope="col"><input name="button" type="submit" class="botonok" id="button" value="Quiero Donar" title="No implementado todavia" onclick="fu_llama_pagina('1')"/></th>
+  </tr>
+  <tr>
+    <td align="center"><input name="button2" type="submit" class="botonok" id="button2" value="Quiero Solicitar" onclick="fu_llama_pagina('2')" title="Adelante ...probar"/></td>
+  </tr>
+  <tr>
+    <td align="center"><input name="button3" type="submit" class="botonok" id="button3" value="Quiero Armar" title="No implementado todavia" onclick="fu_llama_pagina('3')"/></td>
+  </tr>
+  <tr>
+    <td align="center">&nbsp;</td>
+  </tr>
+</table>
+
+</body>
+</html>
+<script language="javascript">
+	function fu_llama_pagina(pagina)
+	{
+		if (pagina=="1") {alert("No implementado todavia");}
+		if (pagina=="2") {window.location.href = "solicitar_mascara.html";}
+		if (pagina=="3") {alert("No implementado todavia");}
+		
+	}
+</script>

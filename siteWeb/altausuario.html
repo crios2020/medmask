@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link href="MedMask.css" rel="stylesheet" type="text/css">
+<form method="POST" action="https://diycovid19mask.com/medMaskCore/entidades/usuarios/v1/alta/">
+<div align="center" class="active">
+<table width="600px" align="center" class="tablas">
+      <tr><td>Nombre</td><td><input type="text" name="nombre" required></td></tr>
+      <tr><td>Apellido</td><td><input type="text" name="apellido" required></td></tr>
+      <tr><td>Localidad</td><td><input type="text" name="localidad" required></td></tr>
+      <tr><td>Provincia</td><td><input type="text" name="provincia" required></td></tr>
+      <tr><td>Pais</td><td><input type="text" name="pais" required></td></tr>
+	  <tr><td>Email</td><td><input type="text" name="email" required></td></tr>
+	  <tr><td>Password</td><td><input type="password" name="pass" required></td></tr>
+      <tr><td colspan="2"><div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="switch1">
+    <label class="custom-control-label" for="switch1">Quiero Donar</label>
+  </div></td></tr>
+      <tr><td colspan="2"><div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="switch2">
+    <label class="custom-control-label" for="switch2">Quiero Solicitar</label>
+  </div></td></tr>
+      <tr><td colspan="2"><div class="custom-control custom-switch">
+    <input type="checkbox" class="custom-control-input" id="switch3">
+    <label class="custom-control-label" for="switch3">Quiero Armar</label>
+  </div></td></tr>
+	
+	
+	
+	  <tr><td colspan="2" align="center">Todos los campos son Obligatorios</td></tr>
+      <tr><td>&nbsp;
+  
+		  
+		  </td><td>&nbsp;</td></tr>
+      <tr><td colspan="2"  align="center"><input type="submit" class="botonok"  value="Alta">
+        &nbsp;  <input name="Botón" type="button" class="botonok"  value="Volver" onclick="fu_volver()"/></td></tr>
+</table>
+</div>
+</form>
+<p id="demo"></p>
+<script language="javascript">
+	function fu_volver()
+	{
+		window.location.href = "login.html";
+	}
+</script>

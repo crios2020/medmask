@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<link href="MedMask.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<style type="text/css">
+body {
+	background-color: #1AC8CB;
+}
+</style>
+<meta charset="utf-8">
+<title>Documento sin título</title>
+</head>
+
+<body>
+<form action="donantes.html" method="post">
+<table width="600" border="0" align="center" cellpadding="0" cellspacing="0" class="tablas">
+  <tbody>
+    <tr>
+      <td colspan="2" class="Texto_Titulo_Accion">Solicitar Máscaras</td>
+    </tr>
+    <tr>
+      <td width="156">Mensaje:</td>
+      <td width="440"><textarea name="textarea" cols="25" rows="6" id="textarea"></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><input name="submit" type="submit" class="botonok" id="submit" value="Enviar">
+      <input name="submit2" type="submit" class="botonok" id="submit2" value="Volver" onclick="fu_volver()"></td>
+    </tr>
+  </tbody>
+</table>
+</form>
+</body>
+</html>
+<script language="javascript">
+	function fu_volver()
+	{
+		window.location.href = "acciones.html";
+	}
+</script>

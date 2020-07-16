@@ -1,0 +1,19 @@
+<?php
+
+
+$string = file_get_contents("https://diycovid19mask.com/medMaskCore/geografia/provinciasArgentinas/v1");
+$json = json_decode($string, true);
+
+foreach ($json as $key => $value) {
+    if (!is_array($value)) {
+        echo $key . '=>' . $value . '<br />';
+    } else {
+        foreach ($value as $key => $val) {
+            echo $key . '=>' . $val . '<br />';
+        }
+    }
+}
+
+
+?>
+
