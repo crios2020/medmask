@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pantalla23ArmadorMensajeDonantes">
+
+    <TextView
+        android:id="@+id/txtMensajeDonante"
+        android:layout_width="172dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/shape_bordes"
+        android:gravity="left|fill_vertical"
+        android:text="10 x Zunchos.               5 x Precintos.                         2 x Placa acetato."
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/TituloMsgDoante" />
+
+    <TextView
+        android:id="@+id/TituloMsgDoante"
+        android:layout_width="252dp"
+        android:layout_height="76dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:text="@string/txtTituloMsgDonanteString"
+        android:textColor="#6098C2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circleImageViewDonante" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageViewDonante"
+        android:layout_width="175dp"
+        android:layout_height="183dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/usuario"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSolicitar"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="187dp"
+        android:layout_height="79dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/botones_redondeados_azules"
+        android:onClick="primero"
+        android:text="@string/btnSolicitarString"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMensajeDonante" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="Mensaje:"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TituloMsgDoante"
+        app:layout_constraintVertical_bias="0.101" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

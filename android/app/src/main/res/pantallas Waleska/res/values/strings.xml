@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Medmask</string>
+    <string name="btnBorrarString">Borrar</string>
+    <string name="txtMensajeString">Martín entregó la máscara!</string>
+    <string name="txtTituloMsgSolicitanteString">Juan necesita máscaras</string>
+    <string name="txtTituloMsgDonanteString">Pedro puede donar</string>
+    <string name="btnAyudarString">Ayudar</string>
+    <string name="btnSolicitarString">Solicitar</string>
+</resources>
