@@ -11,10 +11,7 @@ public class Donante {
         this.id = id;
         this.idUsuario = idUsuario;
     }
-    @Override
-    public String toString() {
-        return "Donante{" + "id=" + id + ", idUsuario=" + idUsuario + '}';
-    }
+    @Override public String toString() { return "Donante{" + "id=" + id + ", idUsuario=" + idUsuario + '}'; }
     public int getId() {
         return id;
     }

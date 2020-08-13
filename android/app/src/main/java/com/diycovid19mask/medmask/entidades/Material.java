@@ -13,10 +13,7 @@ private int id;
         this.nombre = nombre;
         this.descripcion = descripcion;
     }
-    @Override
-    public String toString() {
-        return "Material{" + "id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + '}';
-    }
+    @Override public String toString() { return "Material{" + "id=" + id + ", nombre=" + nombre + ", descripcion=" + descripcion + '}'; }
     public int getId() {
         return id;
     }

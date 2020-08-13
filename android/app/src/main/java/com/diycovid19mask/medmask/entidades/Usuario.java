@@ -36,9 +36,8 @@ public class Usuario {
         this.email = email;
         this.pass = pass;
     }
-    @Override
-    public String toString() {
-        return "Armador{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", localidad=" + localidad + ", provincia=" + provincia + ", pais=" + pais + ", email=" + email + ", pass=" + pass + '}';
+    @Override public String toString() {
+        return id + ", " + nombre + ", " + apellido + ", " + localidad + ", " + provincia + ", " + pais + ", " + email;
     }
     public int getId() {
         return id;

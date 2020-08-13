@@ -23,8 +23,5 @@ private int idUsuario;
     public void setIdUsuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
-    @Override
-    public String toString() {
-        return "Armador{" + "id=" + id + ", idUsuario=" + idUsuario + '}';
-    }
+    @Override public String toString() { return "Armador{" + "id=" + id + ", idUsuario=" + idUsuario + '}'; }
 }

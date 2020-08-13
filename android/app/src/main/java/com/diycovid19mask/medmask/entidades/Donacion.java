@@ -25,8 +25,7 @@ private String mensaje;
         this.fechaDonacion = fechaDonacion;
         this.mensaje = mensaje;
     }
-    @Override
-    public String toString() {
+    @Override public String toString() {
         return "Donacion{" + "id=" + id + ", idDonante=" + idDonante + ", estado=" + estado + ", fechaPublicacion=" + fechaPublicacion + ", fechaDonacion=" + fechaDonacion + ", mensaje=" + mensaje + '}';
     }
     public int getId() {

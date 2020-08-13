@@ -13,10 +13,7 @@ public class Solicitante {
         this.idUsuario = idUsuario;
         this.institucion = institucion;
     }
-    @Override
-    public String toString() {
-        return "Solicitante{" + "id=" + id + ", idUsuario=" + idUsuario + ", institucion=" + institucion + '}';
-    }
+    @Override public String toString() { return "Solicitante{" + "id=" + id + ", idUsuario=" + idUsuario + ", institucion=" + institucion + '}'; }
     public int getId() {
         return id;
     }

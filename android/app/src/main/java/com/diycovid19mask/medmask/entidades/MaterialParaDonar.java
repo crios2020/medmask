@@ -16,8 +16,7 @@ public class MaterialParaDonar {
         this.idMaterial = idMaterial;
         this.cantidad = cantidad;
     }
-    @Override
-    public String toString() {
+    @Override public String toString() {
         return "MaterialParaDonar{" + "id=" + id + ", idDonacion=" + idDonacion + ", idMaterial=" + idMaterial + ", cantidad=" + cantidad + '}';
     }
     public int getId() {

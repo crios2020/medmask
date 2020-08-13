@@ -33,8 +33,7 @@ public class SolicitudDeMaterial {
         this.cantidadRecibida = cantidadRecibida;
         this.mensaje = mensaje;
     }
-    @Override
-    public String toString() {
+    @Override public String toString() {
         return "SolicitudDeMaterial{" + "id=" + id + ", IdSolicitante=" + IdSolicitante + ", estado=" + estado + ", fechaPublicacion=" + fechaPublicacion + ", fechaRecepcion=" + fechaRecepcion + ", IdMaterial=" + IdMaterial + ", cantidad=" + cantidad + ", cantidadRecibida=" + cantidadRecibida + ", mensaje=" + mensaje + '}';
     }
     public int getId() {
